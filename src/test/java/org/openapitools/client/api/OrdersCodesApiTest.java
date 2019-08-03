@@ -34,6 +34,7 @@ import java.util.Map;
 /**
  * API tests for OrdersCodesApi
  */
+@Ignore
 public class OrdersCodesApiTest {
 
     private final OrdersCodesApi api = new OrdersCodesApi();

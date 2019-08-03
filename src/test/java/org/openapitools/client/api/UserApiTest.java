@@ -30,6 +30,7 @@ import java.util.Map;
 /**
  * API tests for UserApi
  */
+@Ignore
 public class UserApiTest {
 
     /**

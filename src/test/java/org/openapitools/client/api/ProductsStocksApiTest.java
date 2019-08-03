@@ -32,6 +32,7 @@ import java.util.Map;
 /**
  * API tests for ProductsStocksApi
  */
+@Ignore
 public class ProductsStocksApiTest {
 
     private final ProductsStocksApi api = new ProductsStocksApi();

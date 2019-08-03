@@ -24,3 +24,4 @@
 src\test\java\org\openapitools\client\api\ProductsStocksApiTest.java
 src\test\java\org\openapitools\client\api\OrdersCodesApiTest.java
 src\test\java\org\openapitools\client\api\UserApiTest.java
+README.md
