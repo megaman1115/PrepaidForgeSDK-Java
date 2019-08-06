@@ -19,28 +19,37 @@ creates order
 ### Example
 ```java
 // Import classes:
-//import org.openapitools.client.ApiClient;
-//import org.openapitools.client.ApiException;
-//import org.openapitools.client.Configuration;
-//import org.openapitools.client.auth.*;
-//import org.openapitools.client.api.OrdersCodesApi;
+import com.prepaidforge.client.ApiClient;
+import com.prepaidforge.client.ApiException;
+import com.prepaidforge.client.Configuration;
+import com.prepaidforge.client.auth.*;
+import com.prepaidforge.client.models.*;
+import com.prepaidforge.client.api.OrdersCodesApi;
 
-ApiClient defaultClient = Configuration.getDefaultApiClient();
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("http://localhost:8080/api-1.0-SNAPSHOT/v1");
+    
+    // Configure API key authorization: PrepaidforgeAPIToken
+    ApiKeyAuth PrepaidforgeAPIToken = (ApiKeyAuth) defaultClient.getAuthentication("PrepaidforgeAPIToken");
+    PrepaidforgeAPIToken.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //PrepaidforgeAPIToken.setApiKeyPrefix("Token");
 
-// Configure API key authorization: PrepaidforgeAPIToken
-ApiKeyAuth PrepaidforgeAPIToken = (ApiKeyAuth) defaultClient.getAuthentication("PrepaidforgeAPIToken");
-PrepaidforgeAPIToken.setApiKey("YOUR API KEY");
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//PrepaidforgeAPIToken.setApiKeyPrefix("Token");
-
-OrdersCodesApi apiInstance = new OrdersCodesApi();
-SkuRequest skuRequest = new SkuRequest(); // SkuRequest | 
-try {
-    CodeDeliveryPojo result = apiInstance.createSingleOrder(skuRequest);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling OrdersCodesApi#createSingleOrder");
-    e.printStackTrace();
+    OrdersCodesApi apiInstance = new OrdersCodesApi(defaultClient);
+    SkuRequest skuRequest = new SkuRequest(); // SkuRequest | 
+    try {
+      CodeDeliveryPojo result = apiInstance.createSingleOrder(skuRequest);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling OrdersCodesApi#createSingleOrder");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
 }
 ```
 
@@ -62,6 +71,11 @@ Name | Type | Description  | Notes
 
  - **Content-Type**: application/json
  - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**0** | default response |  -  |
 
 <a name="getResponseOfSingleCodeRequest"></a>
 # **getResponseOfSingleCodeRequest**
@@ -74,28 +88,37 @@ Retrieve code using custom order reference
 ### Example
 ```java
 // Import classes:
-//import org.openapitools.client.ApiClient;
-//import org.openapitools.client.ApiException;
-//import org.openapitools.client.Configuration;
-//import org.openapitools.client.auth.*;
-//import org.openapitools.client.api.OrdersCodesApi;
+import com.prepaidforge.client.ApiClient;
+import com.prepaidforge.client.ApiException;
+import com.prepaidforge.client.Configuration;
+import com.prepaidforge.client.auth.*;
+import com.prepaidforge.client.models.*;
+import com.prepaidforge.client.api.OrdersCodesApi;
 
-ApiClient defaultClient = Configuration.getDefaultApiClient();
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("http://localhost:8080/api-1.0-SNAPSHOT/v1");
+    
+    // Configure API key authorization: PrepaidforgeAPIToken
+    ApiKeyAuth PrepaidforgeAPIToken = (ApiKeyAuth) defaultClient.getAuthentication("PrepaidforgeAPIToken");
+    PrepaidforgeAPIToken.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //PrepaidforgeAPIToken.setApiKeyPrefix("Token");
 
-// Configure API key authorization: PrepaidforgeAPIToken
-ApiKeyAuth PrepaidforgeAPIToken = (ApiKeyAuth) defaultClient.getAuthentication("PrepaidforgeAPIToken");
-PrepaidforgeAPIToken.setApiKey("YOUR API KEY");
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//PrepaidforgeAPIToken.setApiKeyPrefix("Token");
-
-OrdersCodesApi apiInstance = new OrdersCodesApi();
-SkuRequest skuRequest = new SkuRequest(); // SkuRequest | 
-try {
-    CodeDeliveryPojo result = apiInstance.getResponseOfSingleCodeRequest(skuRequest);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling OrdersCodesApi#getResponseOfSingleCodeRequest");
-    e.printStackTrace();
+    OrdersCodesApi apiInstance = new OrdersCodesApi(defaultClient);
+    SkuRequest skuRequest = new SkuRequest(); // SkuRequest | 
+    try {
+      CodeDeliveryPojo result = apiInstance.getResponseOfSingleCodeRequest(skuRequest);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling OrdersCodesApi#getResponseOfSingleCodeRequest");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
 }
 ```
 
@@ -117,4 +140,9 @@ Name | Type | Description  | Notes
 
  - **Content-Type**: application/json
  - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**0** | default response |  -  |
 

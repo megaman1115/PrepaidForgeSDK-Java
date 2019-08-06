@@ -29,6 +29,7 @@ SEK | &quot;SEK&quot;
 RUB | &quot;RUB&quot;
 AUD | &quot;AUD&quot;
 CAD | &quot;CAD&quot;
+SAR | &quot;SAR&quot;
 
 
 

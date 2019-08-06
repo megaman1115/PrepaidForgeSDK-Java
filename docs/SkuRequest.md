@@ -13,8 +13,8 @@ Name | Type | Description | Notes
 **quantity** | [**BigDecimal**](BigDecimal.md) |  |  [optional]
 **customOrderReference** | **String** |  |  [optional]
 **quantityHandled** | **Integer** |  |  [optional]
-**requestHandled** | **Boolean** |  |  [optional]
 **quantityNeeded** | [**BigDecimal**](BigDecimal.md) |  |  [optional]
+**requestHandled** | **Boolean** |  |  [optional]
 
 
 

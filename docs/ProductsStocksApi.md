@@ -19,17 +19,29 @@ Retrieves all products
 ### Example
 ```java
 // Import classes:
-//import org.openapitools.client.ApiException;
-//import org.openapitools.client.api.ProductsStocksApi;
+import com.prepaidforge.client.ApiClient;
+import com.prepaidforge.client.ApiException;
+import com.prepaidforge.client.Configuration;
+import com.prepaidforge.client.models.*;
+import com.prepaidforge.client.api.ProductsStocksApi;
 
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("http://localhost:8080/api-1.0-SNAPSHOT/v1");
 
-ProductsStocksApi apiInstance = new ProductsStocksApi();
-try {
-    List<Product> result = apiInstance.findAllProducts();
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling ProductsStocksApi#findAllProducts");
-    e.printStackTrace();
+    ProductsStocksApi apiInstance = new ProductsStocksApi(defaultClient);
+    try {
+      List<Product> result = apiInstance.findAllProducts();
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling ProductsStocksApi#findAllProducts");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
 }
 ```
 
@@ -49,6 +61,11 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**0** | default response |  -  |
+
 <a name="findAllStocks"></a>
 # **findAllStocks**
 > List&lt;SimpleStockPojo&gt; findAllStocks(stockRequest)
@@ -60,28 +77,37 @@ Find Stocks
 ### Example
 ```java
 // Import classes:
-//import org.openapitools.client.ApiClient;
-//import org.openapitools.client.ApiException;
-//import org.openapitools.client.Configuration;
-//import org.openapitools.client.auth.*;
-//import org.openapitools.client.api.ProductsStocksApi;
+import com.prepaidforge.client.ApiClient;
+import com.prepaidforge.client.ApiException;
+import com.prepaidforge.client.Configuration;
+import com.prepaidforge.client.auth.*;
+import com.prepaidforge.client.models.*;
+import com.prepaidforge.client.api.ProductsStocksApi;
 
-ApiClient defaultClient = Configuration.getDefaultApiClient();
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("http://localhost:8080/api-1.0-SNAPSHOT/v1");
+    
+    // Configure API key authorization: PrepaidforgeAPIToken
+    ApiKeyAuth PrepaidforgeAPIToken = (ApiKeyAuth) defaultClient.getAuthentication("PrepaidforgeAPIToken");
+    PrepaidforgeAPIToken.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //PrepaidforgeAPIToken.setApiKeyPrefix("Token");
 
-// Configure API key authorization: PrepaidforgeAPIToken
-ApiKeyAuth PrepaidforgeAPIToken = (ApiKeyAuth) defaultClient.getAuthentication("PrepaidforgeAPIToken");
-PrepaidforgeAPIToken.setApiKey("YOUR API KEY");
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//PrepaidforgeAPIToken.setApiKeyPrefix("Token");
-
-ProductsStocksApi apiInstance = new ProductsStocksApi();
-StockRequest stockRequest = new StockRequest(); // StockRequest | 
-try {
-    List<SimpleStockPojo> result = apiInstance.findAllStocks(stockRequest);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling ProductsStocksApi#findAllStocks");
-    e.printStackTrace();
+    ProductsStocksApi apiInstance = new ProductsStocksApi(defaultClient);
+    StockRequest stockRequest = new StockRequest(); // StockRequest | 
+    try {
+      List<SimpleStockPojo> result = apiInstance.findAllStocks(stockRequest);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling ProductsStocksApi#findAllStocks");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
 }
 ```
 
@@ -103,4 +129,9 @@ Name | Type | Description  | Notes
 
  - **Content-Type**: application/json
  - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**0** | default response |  -  |
 

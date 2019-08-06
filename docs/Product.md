@@ -25,9 +25,9 @@ Name | Type | Description | Notes
 **platforms** | **List&lt;String&gt;** |  |  [optional]
 **rating** | **Integer** |  |  [optional]
 **productType** | [**ProductTypeEnum**](#ProductTypeEnum) |  |  [optional]
+**productDifferenceHash** | **Integer** |  |  [optional]
 **vatProduct** | **Boolean** |  |  [optional]
 **categories** | **List&lt;String&gt;** |  |  [optional]
-**productDifferenceHash** | **Integer** |  |  [optional]
 
 
 
