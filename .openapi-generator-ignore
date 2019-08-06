@@ -21,7 +21,9 @@
 #docs/*.md
 # Then explicitly reverse the ignore rule for a single file:
 #!docs/README.md
-src\test\java\org\openapitools\client\api\ProductsStocksApiTest.java
-src\test\java\org\openapitools\client\api\OrdersCodesApiTest.java
-src\test\java\org\openapitools\client\api\UserApiTest.java
+src\test\java\com\prepaidforge\client\api\ProductsStocksApiTest.java
+src\test\java\com\prepaidforge\client\api\OrdersCodesApiTest.java
+src\test\java\com\prepaidforge\client\api\UserApiTest.java
 README.md
+
+*gradle*
