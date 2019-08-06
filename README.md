@@ -38,19 +38,11 @@ Add this dependency to your project's POM:
 
 ```xml
 <dependency>
-  <groupId>org.openapitools</groupId>
-  <artifactId>openapi-java-client</artifactId>
-  <version>1.0.0</version>
-  <scope>compile</scope>
+    <groupId>com.prepaidforge</groupId>
+    <artifactId>prepaidforge-sdk-java</artifactId>
+    <version>1.0.0</version>
+    <scope>compile</scope>
 </dependency>
-```
-
-### Gradle users
-
-Add this dependency to your project's build file:
-
-```groovy
-compile "org.openapitools:openapi-java-client:1.0.0"
 ```
 
 ### Others
